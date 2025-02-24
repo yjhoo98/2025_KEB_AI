@@ -9,6 +9,9 @@
 .idea/**/dictionaries
 .idea/**/shelf
 .idea
+.idea/2025_KEB_AI.iml
+.idea/misc.xml
+
 # AWS User-specific
 .idea/**/aws.xml
 
