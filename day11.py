@@ -1,7 +1,7 @@
 #assignment:최근접 이웃 모델을 커스텀 클래스로 설계
 
 # from sklearn.linear_model import LinearRegression
-from yjhlearn import LinearRegression
+
 from yjhlearn import KNeighborRegressor
 import pandas as pd
 import matplotlib.pyplot as plt
