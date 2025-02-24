@@ -25,3 +25,23 @@ class LinearRegression:
             :return: predict value for input(2d array format)
             """
             return self.slope*np.array(X)+self.intercept
+class KNeighborRegressor:
+    def __init__(self,n_neighbors=5):
+        pass
+    def fit(self,X,y):
+        """
+        learning function
+        :param X: independent variable(2d array format)
+        :param y: dependent variable(2d array format)
+        :return: void
+        """
+        np.sqrt
+        pass
+    def predict(self,X)->np.ndarray:
+            """
+            predict value for input
+            :param self:
+            :param X: new independent variable
+            :return: predict value for input(2d array format)
+            """
+            return self.slope*np.array(X)+self.intercept
