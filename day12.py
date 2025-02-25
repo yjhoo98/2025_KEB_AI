@@ -3,7 +3,7 @@
 from statistics import median
 
 import matplotlib.pyplot as plt
-from sklearn.neighbors import KNeighborsRegressor
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
@@ -18,8 +18,8 @@ titanic_fill_row = titanic.fillna({'age' : median_age})  # 결측치 처리
 X = titanic_fill_row[['age']]  # 독립 변수 설정
 y = titanic_fill_row[['survived']]  # 종속 변수 설정
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=42)
-model=KNeighborsRegressor(n_neighbors=10)
-model.fit(X_train,y_train)
+model=KNeighborsClassifier(n_neighbors=10)
+model.fit(X_train,np.ravel(y_train))
 # print(type(titanic))
 y_pred=model.predict(X_test)
 # print(titanic.head())
