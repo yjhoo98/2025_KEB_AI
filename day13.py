@@ -1,10 +1,18 @@
-import matplotlib.pyplot as plt
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.model_selection import train_test_split
-import numpy as np
-import pandas as pd
-data=[1,7,5,2,8,3,6,4]
-bins =[0,3,6,9]
-labels=['low','mid','high']
-cat=pd.cut(data,bins,True,labels=labels)
-print(cat)
+class Pokemon:
+    def __init__(self,name):
+        self.name=name
+    def walks(self):
+        print("walking")
+    def attack(self,target_pokemon):
+        print(f"{self.name} attack {target_pokemon.name}")
+class Pikachu(Pokemon):
+    pass
+class Agumon:
+    def __init__(self,name):
+        self.name=name
+    pass
+pikachu=Pikachu('피카츄')
+pikachu.walks()
+
+agumon=Agumon('아구몬')
+pikachu.attack(agumon)
