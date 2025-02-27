@@ -1,5 +1,4 @@
 import numpy as np
-
 class KNeighborRegressor:
     def __init__(self,n_neighbors=5):
         self.n_neighbors=n_neighbors
@@ -12,7 +11,6 @@ class KNeighborRegressor:
         """
         self.X_train=X_train
         self.y_train=y_train
-
     def predict(self,X_test):
         predictions = []
         for x_test in X_test:  # loop just one time in this example
@@ -24,5 +22,4 @@ class KNeighborRegressor:
             prediction = np.mean(self.y_train[indices])
             # prediction = (self.y_train[indices[0]]+self.y_train[indices[1]]+self.y_train[indices[2]]) / self.n_neighbors
             predictions.append(prediction)
-
             return np.array(prediction).reshape(-1, 1)
